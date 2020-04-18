@@ -19,7 +19,8 @@ from generator import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
+    path('', views.home, name='home'),
     path('passwordgenerator/', views.pwgen, name='password generator'),
     path('passwordgenerator/generatedpassword/', views.password, name='display password'),
+    path('userinfo/', views.userinfo, name='userinfo'),
 ]

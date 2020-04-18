@@ -36,3 +36,10 @@ def password(request):
         thepassword += random.choice(basechar)
 
     return render(request, 'generator/password.html', {'password':thepassword})
+
+def userinfo(request):
+    name = 'umesh'
+    reason = 'test django with python'
+    purpose = 'generates a random password'
+
+    return render(request, 'generator/user.html', {'name':name, 'reason':reason, 'purpose':purpose})
